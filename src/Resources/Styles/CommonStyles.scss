@@ -1,0 +1,87 @@
+//Fonts Props
+.font-ten-normal-white {
+  font: normal normal 600 10px/14px Mecellem;
+  letter-spacing: -0.33px;
+  color: #ffffff;
+}
+.font-ten-normal-grey {
+  font: normal normal normal 13px/14px Mecellem;
+  letter-spacing: 0px;
+  color: #768995;
+}
+.font-eleven-normal-black {
+  font: normal normal 600 10px/14px Mecellem;
+  letter-spacing: -0.33px;
+  color: #030a0f;
+}
+.font-eleven-normal-white {
+  font: normal normal 600 10px/14px Mecellem;
+  letter-spacing: -0.33px;
+  color: #ffffff;
+}
+.font-thirteen-normal-black {
+  font: normal normal normal 13px/17px Mecellem;
+  letter-spacing: 0px;
+  color: #030a0f;
+}
+.font-thirteen-normal-white {
+  font: normal normal normal 13px/17px Mecellem;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.font-thirteen-normal-grey {
+  font: normal normal normal 13px/8px Mecellem;
+  letter-spacing: 0px;
+  color: #7a8c98;
+}
+.font-thirteen-bold-black {
+  font: normal normal bold 13px/17px Mecellem;
+  letter-spacing: 0px;
+  color: #0c1014;
+}
+.font-fourteen-normal-black {
+  font: normal normal bold 14px/8px Mecellem;
+  letter-spacing: 0px;
+  color: #11141c;
+}
+
+//Flex Props
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+  display: flex;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Other
+.overflow-ellipsis {
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+@media screen and (max-width: 1140px) {
+  .collections-content-primitive-section-auxiliarysidenavtree {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1141px) {
+  .collections-content-primitive-section-auxiliarysidenavtree {
+    display: flex !important;
+  }
+}

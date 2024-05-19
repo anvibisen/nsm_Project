@@ -1,0 +1,441 @@
+.App {
+  text-align: center;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  font-family: "Mecellem", monospace;
+
+  .collections-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .collections-content-navbar-section {
+      width: 74px;
+      // height: 768px;
+      background: #252b2b 0% 0% no-repeat padding-box;
+      box-shadow: 5px 0px 6px #55555546;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0px;
+
+      .collections-content-navbar-section-upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        width: 100%;
+
+        .collections-content-navbar-section-upper-project-icon {
+          width: 44px;
+          height: 44px;
+        }
+
+        .collections-content-navbar-section-upper-project-text {
+          font: normal normal 600 11px/16px Mecellem;
+          letter-spacing: 0.49px;
+          color: #ffffff;
+        }
+
+        .collections-content-navbar-section-upper-cells.active {
+          background: rgb(255 255 255 / 10%) 0% 0% no-repeat padding-box;
+          padding: 5px 0px;
+          border-left: 5px solid #ffaf2e;
+        }
+
+        .collections-content-navbar-section-upper-cells {
+          width: 100%;
+        }
+
+        .collections-content-navbar-section-upper-icon {
+          width: 23px;
+          height: 23px;
+        }
+      }
+
+      .collections-content-navbar-section-lower {
+        .collections-content-navbar-section-lower-profile-icon {
+          width: 43px;
+          height: 43px;
+        }
+      }
+    }
+
+    .collections-content-primitive-section {
+      display: flex;
+      height: 100%;
+      width: 100%;
+
+      .collections-content-primitive-section-auxiliarysidenavtree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        z-index: 1;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 5px 0px 8px #252f3b14;
+
+        .auxiliarysidenavtree-header {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 20px;
+          text-align: left;
+          font: normal normal bold 16px / 8px Mecellem;
+          letter-spacing: 0px;
+          color: #171d24;
+        }
+
+        .auxiliarysidenavtree-content {
+          flex: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+
+          .auxiliarysidenavtree-content-firm-collections,
+          .auxiliarysidenavtree-content-muellif-collections {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .auxiliarysidenavtree-content-firm-collections-header,
+            .auxiliarysidenavtree-content-muellif-collections-header {
+              display: flex;
+              width: 210px;
+              align-items: center;
+              justify-content: space-between;
+              padding: 10px 20px;
+
+              .auxiliarysidenavtree-content-firm-collections-header-text,
+              .auxiliarysidenavtree-content-muellif-collections-header-text {
+                text-align: left;
+                font: normal normal bold 13px/8px Mecellem;
+                letter-spacing: 0px;
+                color: #0d1324;
+              }
+
+              .auxiliarysidenavtree-content-firm-collections-header-icon,
+              .auxiliarysidenavtree-content-muellif-collections-header-icon {
+                // width: 6px;
+                height: 10px;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+              }
+            }
+
+            .auxiliarysidenavtree-content-firm-collections-all,
+            .auxiliarysidenavtree-content-firm-collections-contract,
+            .auxiliarysidenavtree-content-firm-collections-document,
+            .auxiliarysidenavtree-content-firm-collections-petition,
+            .auxiliarysidenavtree-content-muellif-collections-all,
+            .auxiliarysidenavtree-content-muellif-collections-contract,
+            .auxiliarysidenavtree-content-muellif-collections-document,
+            .auxiliarysidenavtree-content-muellif-collections-petition {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 10px 20px;
+              gap: 10px;
+              border-radius: 6px;
+              transition: background-color 0.3s, color 0.3s;
+
+              .firm-collections-all-icon,
+              .firm-collections-contract-icon,
+              .firm-collections-document-icon,
+              .firm-collections-petition-icon,
+              .muellif-collections-all-icon,
+              .muellif-collections-contract-icon,
+              .muellif-collections-document-icon,
+              .muellif-collections-petition-icon {
+                height: 17px;
+              }
+
+              .firm-collections-all-text,
+              .firm-collections-contract-text,
+              .firm-collections-document-text,
+              .firm-collections-petition-text,
+              .muellif-collections-all-text,
+              .muellif-collections-contract-text,
+              .muellif-collections-document-text,
+              .muellif-collections-petition-text {
+                text-align: left;
+                font: normal normal normal 13px/8px Mecellem;
+                letter-spacing: 0px;
+                color: #182027;
+                transition: color 0.3s; /* Add transition for smooth color change */
+              }
+            }
+
+            .auxiliarysidenavtree-content-firm-collections-all:hover,
+            .auxiliarysidenavtree-content-firm-collections-contract:hover,
+            .auxiliarysidenavtree-content-firm-collections-document:hover,
+            .auxiliarysidenavtree-content-firm-collections-petition:hover,
+            .auxiliarysidenavtree-content-muellif-collections-all:hover,
+            .auxiliarysidenavtree-content-muellif-collections-contract:hover,
+            .auxiliarysidenavtree-content-muellif-collections-document:hover,
+            .auxiliarysidenavtree-content-muellif-collections-petition:hover {
+              background-color: #ffaf2e !important;
+              color: white !important;
+              border-radius: 6px;
+              cursor: pointer;
+            }
+
+            .auxiliarysidenavtree-content-firm-collections-all:hover
+              .firm-collections-all-text,
+            .auxiliarysidenavtree-content-firm-collections-contract:hover
+              .firm-collections-contract-text,
+            .auxiliarysidenavtree-content-firm-collections-document:hover
+              .firm-collections-document-text,
+            .auxiliarysidenavtree-content-firm-collections-petition:hover
+              .firm-collections-petition-text,
+            .auxiliarysidenavtree-content-muellif-collections-all:hover
+              .muellif-collections-all-text,
+            .auxiliarysidenavtree-content-muellif-collections-contract:hover
+              .muellif-collections-contract-text,
+            .auxiliarysidenavtree-content-muellif-collections-document:hover
+              .muellif-collections-document-text,
+            .auxiliarysidenavtree-content-muellif-collections-petition:hover
+              .muellif-collections-petition-text {
+              color: white !important;
+            }
+          }
+        }
+      }
+
+      .collections-content-primitive-section-info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+
+        .collections-content-primitive-section-info-breadcrumbpathtrail {
+          width: 100%;
+          height: 60px;
+          background: #ffffff 0% 0% no-repeat padding-box;
+          border-bottom: 1px solid #e7e7e7;
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+
+          .breadcrumbpathtrail-origin-icon {
+            height: 13px;
+          }
+
+          .breadcrumbpathtrail-path-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            .breadcrumbpathtrail-path-content-arrow-icon {
+              height: 10px;
+              margin: 10px;
+              rotate: 180deg;
+            }
+          }
+        }
+
+        .collections-content-primitive-section-info-table {
+          flex: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: nowrap;
+          padding: 20px 20px 0px 20px;
+          background: #f5f7f8 0% 0% no-repeat padding-box;
+
+          .collections-section-search-table-tablecontrolheader {
+            width: 100%;
+            min-height: 100px;
+            background: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 2px;
+            border-radius: 5px 5px 0px 0px;
+            padding: 20px;
+            gap: 10px;
+
+            .tablecontrolheader-filter-button {
+              // width: 35px;
+              height: 35px;
+              aspect-ratio: 1/1;
+              background: #f0f4f9 0% 0% no-repeat padding-box;
+              border-radius: 5px;
+              border: none;
+
+              .tablecontrolheader-filter-button-img {
+                position: absolute;
+                left: 10px;
+              }
+            }
+          }
+
+          .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+          }
+
+          .form-control {
+            display: block;
+            width: 488px;
+            height: 35px;
+            background: #f5f8fa 0% 0% no-repeat padding-box;
+            border-radius: 6px;
+            padding: 5px 5px 5px 37px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--bs-body-color);
+            appearance: none;
+            background-clip: padding-box;
+            font: normal normal normal 11px/14px Mecellem;
+            color: #a5b0c2;
+          }
+
+          .search-icon {
+            position: absolute;
+            width: 24px;
+            height: 16px;
+            left: 7px;
+            top: 8px;
+          }
+
+          .collections-content-table {
+            width: 100%;
+            flex: 1;
+            background: white;
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+
+            .table-data-row {
+              height: 60px;
+
+              .td-data-row {
+                padding-top: 25px;
+              }
+            }
+
+            .table-data-row:hover {
+              background-color: #ffaf2e;
+            }
+
+            .collection-model-detail-info-section {
+              .collection-model-detail-info-section-favourite {
+                padding-left: 32px;
+                padding-right: 5px;
+                position: relative;
+
+                .collection-model-detail-info-section-arrow {
+                  rotate: 180deg;
+                  cursor: pointer;
+                }
+              }
+
+              .collection-model-detail-info-section-id {
+                font: normal normal bold 26px/35px Mecellem;
+                padding-left: 22px;
+                letter-spacing: 0px;
+                color: #ffaf2e;
+              }
+
+              .model-info-view-model {
+                width: 96px;
+                height: 36px;
+                border: 1px solid #2f3333;
+                border-radius: 6px;
+                background-color: white;
+              }
+
+              .model-info-model-details {
+                width: 119px;
+                height: 36px;
+                border: none;
+                border-radius: 6px;
+                background-color: #303739;
+              }
+
+              .model-info-select-continue {
+                width: 158px;
+                height: 36px;
+                border: none;
+                border-radius: 6px;
+                background-color: #303739;
+                margin-right: 20px !important;
+              }
+            }
+
+            .table-arrow-data-cell,
+            .table-star-data-cell {
+              padding-left: 20px;
+            }
+
+            .table-actions-data-cell {
+              padding-right: 25px;
+            }
+          }
+
+          .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+
+          .icon-container img {
+            margin-bottom: 2px;
+            margin-right: 2px;
+          }
+
+          .collections-content-primitive-section-info-table-tablepaginationfooter {
+            width: 100%;
+            min-height: 100px;
+            background: white;
+            margin-top: 2px;
+            border-radius: 0px 0px 5px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+
+            .footer-pagination-dropdown {
+              border-radius: 6px;
+              padding: 10px 15px;
+              background: #F8FAFD;
+              font: normal normal normal 16px/9px Mecellem;
+            }
+          }
+          .active > .page-link,
+          .page-link.active {
+            z-index: 3;
+            color: var(--bs-pagination-active-color);
+            background-color: #000000;
+            border-color: #0c0d0f;
+            border-radius: 5px;
+          }
+          .page-link {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
